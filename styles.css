@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pacifico', cursive, sans-serif;
+  background: linear-gradient(120deg, #ffdee9 0%, #b5fffc 50%, #ffb3e6 100%);
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.valentine-message {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  color: #d72660;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 25px;
+  padding: 3em 4em;
+  box-shadow: 0 10px 40px rgba(215, 38, 96, 0.3);
+  backdrop-filter: blur(10px);
+  animation: float 3s ease-in-out infinite;
+}
+
+.valentine-message h1 {
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+  text-shadow: 2px 2px 4px rgba(215, 38, 96, 0.2);
+}
+
+.valentine-message p {
+  font-size: 1.8em;
+  margin: 0.5em 0;
+  color: #ff517e;
+}
+
+.special-message {
+  font-size: 1.3em !important;
+  font-style: italic;
+  margin-top: 1.5em;
+  color: #d72660;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+canvas#heartCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .valentine-message {
+    padding: 2em 2.5em;
+  }
+  
+  .valentine-message h1 {
+    font-size: 2.5em;
+  }
+  
+  .valentine-message p {
+    font-size: 1.3em;
+  }
+  
+  .special-message {
+    font-size: 1em !important;
+  }
+}
